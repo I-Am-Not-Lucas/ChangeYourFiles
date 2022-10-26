@@ -3,17 +3,17 @@ from func import *
 
 print("Choose a option")
 print('-' * 20)
-print("[1] Captilize")
+print("[1] Captilize files")
 print("[2] Lowercase - not working")
 print("[3] Uppercase - not working")
 print('-' * 20)
 
-escolha = input("Opção: ")
+escolha = input(">>> Opção: ")
 situacao = testa_escolha(escolha)
 
 if situacao:
 
-    variavel_caminho = input(("path >>>"))
+    variavel_caminho = input((">>> Path: "))
     print('-' * 20)
 
     caminho = trata_caminho(variavel_caminho)

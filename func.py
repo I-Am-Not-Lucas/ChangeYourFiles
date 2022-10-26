@@ -14,21 +14,22 @@ def testa_escolha(escolha):
 
 def path_test(caminho):
     try:
-        directory = "test_application.txt"
-        parent_dir = caminho
-        path = os.path.join( parent_dir, directory)
-        os.mkdir(path)
+        os.chdir(caminho)
+        arquivo = open("test_application.txt", "a+")
+        arquivo.writelines("Testando o caminho...")
+        arquivo.close()
+
 
     except FileExistsError:
         print("Caminho validado, teste já existente")
 
+
     except PermissionError:
         print("Sem permissão ")
 
-    except Exception as e:
+    except Exception:
         print("Caminho inválido ou inexistente")
-        print(f'Erro: {e}')
-       
+
 
     else:
         print(f"caminho {caminho} é válido")
@@ -41,7 +42,7 @@ def trata_caminho(raw_path):
 
 
 def capitalize(caminho):
-    count = 0 
+    count = -1 
     try:
         for root, dirs, files in os.walk(caminho):
             for file in files:
@@ -51,10 +52,15 @@ def capitalize(caminho):
                 destiny = caminho + f'\\{new_name}'
                 os.rename(source, destiny)
                 count += 1
-        print(f'{count} arquivo(s) renomeados com sucesso')
+
     except FileNotFoundError:
         print("Arquivos não encontrados")
-                
+    
+    except:
+        print("Algo deu errado...")
+
+    else:
+        print(f'{count} arquivo(s) renomeados com sucesso')
 
 
 
