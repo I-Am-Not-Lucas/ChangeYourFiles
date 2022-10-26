@@ -2,6 +2,10 @@
 
 About: This is a project that change files to a especific way
 
+## 📁 Requirements
+```
+Python 3
+```
 ### Actual functions
 - Capitalize
 
@@ -9,3 +13,6 @@ About: This is a project that change files to a especific way
 - lower case 
 - uppercase 
 - replace characters
+
+
+
