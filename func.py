@@ -33,8 +33,11 @@ def capitalize(caminho):
         for file in files:
             name, ext = os.path.splitext(file)
             new_name = name.capitalize() + ext
-            print(file, new_name)
-            os.rename(files, new_name)
+            source = caminho + f'\\{file}'
+            destiny = caminho + f'\\{new_name}'
+            print(source)
+            print(destiny)
+            os.rename(source, destiny)
             
 
 
