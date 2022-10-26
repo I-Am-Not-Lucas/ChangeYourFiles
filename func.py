@@ -16,7 +16,7 @@ def path_test(caminho):
     try:
         os.chdir(caminho)
         arquivo = open("test_application.txt", "a+")
-        arquivo.writelines("Testando o caminho...")
+        arquivo.writelines("Testando o caminho...\n")
         arquivo.close()
 
 
@@ -43,9 +43,10 @@ def trata_caminho(raw_path):
 
 def capitalize(caminho):
     count = -1 
-    try:
-        for root, dirs, files in os.walk(caminho):
-            for file in files:
+  
+    for root, dirs, files in os.walk(caminho):
+        for file in files:
+            try:
                 name, ext = os.path.splitext(file)
                 new_name = name.capitalize() + ext
                 source = caminho + f'\\{file}'
@@ -53,14 +54,15 @@ def capitalize(caminho):
                 os.rename(source, destiny)
                 count += 1
 
-    except FileNotFoundError:
-        print("Arquivos não encontrados")
-    
-    except:
-        print("Algo deu errado...")
-
+            except FileNotFoundError:
+                pass
+            
+            except:
+                print("Algo deu errado...")
+    if count > 0:
+        print(f'{count} arquivo(s) renomeado(s) com sucesso')
     else:
-        print(f'{count} arquivo(s) renomeados com sucesso')
+        print("Nenhum arquivo foi alterado")
 
 
 
