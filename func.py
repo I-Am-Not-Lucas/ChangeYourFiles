@@ -29,16 +29,20 @@ def trata_caminho(raw_path):
 
 
 def capitalize(caminho):
-    for root, dirs, files in os.walk(caminho):
-        for file in files:
-            name, ext = os.path.splitext(file)
-            new_name = name.capitalize() + ext
-            source = caminho + f'\\{file}'
-            destiny = caminho + f'\\{new_name}'
-            print(source)
-            print(destiny)
-            os.rename(source, destiny)
-            
+    count = 0 
+    try:
+        for root, dirs, files in os.walk(caminho):
+            for file in files:
+                name, ext = os.path.splitext(file)
+                new_name = name.capitalize() + ext
+                source = caminho + f'\\{file}'
+                destiny = caminho + f'\\{new_name}'
+                os.rename(source, destiny)
+                count += 1
+        print(f'{count} arquivo(s) renomeados com sucesso')
+    except FileNotFoundError:
+        print("Arquivos não encontrados")
+                
 
 
 

@@ -5,7 +5,7 @@ from func import *
 # print()
 # print("[1] Captilize")
 
-variavel_caminho = r"C:\Programacao\Python\PROJETOS\ChangeYourFiles\testeCaptilze"
+variavel_caminho = input(("path >>>"))
 caminho = trata_caminho(variavel_caminho)
 # path_test(caminho)
 
