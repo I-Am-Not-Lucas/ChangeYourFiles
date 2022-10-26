@@ -1,1 +1,0 @@
-=> Mudar o Try para dentro do for
