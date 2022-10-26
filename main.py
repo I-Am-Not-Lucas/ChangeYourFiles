@@ -4,8 +4,8 @@ from func import *
 print("Choose a option")
 print('-' * 20)
 print("[1] Captilize files")
-print("[2] Lowercase - not working")
-print("[3] Uppercase - not working")
+print("[2] Lowercase")
+print("[3] Uppercase")
 print('-' * 20)
 
 escolha = input(">>> Opção: ")
@@ -22,6 +22,12 @@ if situacao:
 
     if escolha == '1':
         capitalize(caminho)
+
+    elif escolha == '2':
+        lower_case(caminho)
+
+    elif escolha == "3":
+        upper_case(caminho)
 
 else:
     print("Opção inválida ou fora do ar")
