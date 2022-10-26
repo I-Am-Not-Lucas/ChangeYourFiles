@@ -1,9 +1,20 @@
 import os
 import shutil 
+import sys
+
+def testa_escolha(escolha): 
+    opcoes_funcionais =  ['1']
+
+    if escolha in opcoes_funcionais:
+        return True
+    else:
+        return False
+    
+
 
 def path_test(caminho):
     try:
-        directory = "teste"
+        directory = "test_application.txt"
         parent_dir = caminho
         path = os.path.join( parent_dir, directory)
         os.mkdir(path)
@@ -12,10 +23,11 @@ def path_test(caminho):
         print("Caminho validado, teste já existente")
 
     except PermissionError:
-        print("Sem permissão :(")
+        print("Sem permissão ")
 
-    except:
+    except Exception as e:
         print("Caminho inválido ou inexistente")
+        print(f'Erro: {e}')
        
 
     else:

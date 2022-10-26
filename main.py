@@ -1,23 +1,28 @@
 from func import *
 
 
-# print("Choose a option")
-# print()
-# print("[1] Captilize")
+print("Choose a option")
+print('-' * 20)
+print("[1] Captilize")
+print("[2] Lowercase - not working")
+print("[3] Uppercase - not working")
+print('-' * 20)
 
-variavel_caminho = input(("path >>>"))
-caminho = trata_caminho(variavel_caminho)
-# path_test(caminho)
+escolha = input("Opção: ")
+situacao = testa_escolha(escolha)
 
-escolha = '1'
+if situacao:
+
+    variavel_caminho = input(("path >>>"))
+    print('-' * 20)
+
+    caminho = trata_caminho(variavel_caminho)
+    path_test(caminho)
 
 
-while True:
     if escolha == '1':
         capitalize(caminho)
-        break
 
-    else:
-        print("opção inválida")
-        break
+else:
+    print("Opção inválida ou fora do ar")
 
