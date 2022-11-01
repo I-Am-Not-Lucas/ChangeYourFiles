@@ -8,10 +8,11 @@ Python 3
 ```
 ### Actual functions
 - Capitalize
-- lower case 
-- upper case 
+- Lower case 
+- Upper case 
 ### future Functions
-- replace characters
+- Replace characters
+- Work in Linux
 
 
 
