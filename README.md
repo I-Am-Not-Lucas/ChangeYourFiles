@@ -13,6 +13,4 @@ Python 3
 ### future Functions
 - Replace characters
 - Work in Linux
-
-
-
+- Work with Directory
