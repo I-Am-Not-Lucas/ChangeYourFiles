@@ -1,6 +1,5 @@
 from func import *
 
-
 print("Choose a option")
 print('-' * 20)
 print("[1] Captilize files")

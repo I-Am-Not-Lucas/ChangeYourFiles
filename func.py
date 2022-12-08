@@ -40,7 +40,6 @@ def trata_caminho(raw_path):
 
     return caminho_tratado
 
-
 def capitalize(caminho):
     count = -1 
   
@@ -86,6 +85,7 @@ def lower_case(caminho):
         print(f'{count} arquivo(s) renomeado(s) com sucesso')
     else:
         print("Nenhum arquivo foi alterado")
+
 
 def upper_case(caminho):
     count = -1 
